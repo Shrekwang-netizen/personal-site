@@ -1,0 +1,26 @@
+# Publish the current site; keep local notes, archives and unused artwork local.
+/*
+!/.gitignore
+!/.nojekyll
+!/README.md
+!/index.html
+!/about.html
+!/onclock.html
+!/offclock.html
+!/data.js
+!/assets/
+/assets/*
+!/assets/app.js
+!/assets/home.js
+!/assets/theme-mode.js
+!/assets/theme.css
+!/assets/home.css
+!/assets/favicon.png
+!/assets/og.png
+!/assets/portrait-painted-natural.png
+!/assets/fonts/
+/assets/fonts/*
+!/assets/fonts/squada-one.woff2
+!/assets/fonts/caveat.woff2
+!/assets/fonts/OFL-SquadaOne.txt
+!/assets/fonts/OFL-Caveat.txt

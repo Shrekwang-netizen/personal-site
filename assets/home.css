@@ -1,0 +1,83 @@
+/* A fluid typographic poster. Letter outlines are bundled, not font-dependent. */
+body.poster-home{margin:0;padding:clamp(12px,2.5vw,34px);min-height:100svh;display:grid;color:var(--poster-ink);background:var(--paper)}
+body.poster-home::after{display:none}
+.poster-frame{min-width:0;min-height:calc(100svh - clamp(24px,5vw,68px));border:1.5px solid currentColor;border-radius:12px;display:grid;align-content:center;padding:clamp(24px,3vw,44px) clamp(20px,7.3vw,110px)}
+.poster{width:100%;max-width:1450px;margin:auto;isolation:isolate}
+.poster a{color:inherit}
+.poster a:hover{background:none}
+.poster a:focus-visible,.poster button:focus-visible{outline:2px dashed currentColor;outline-offset:8px;border-radius:5px}
+.poster-nav{display:flex;align-items:flex-end;justify-content:space-between;gap:1.2%;padding:0 1.5% 0 3%;position:relative;z-index:2}
+.doodle-link,.theme-control{display:grid;justify-items:center;align-content:end;flex:0 1 auto;position:relative;font-family:var(--body);font-size:clamp(12px,1.4vw,19px);font-weight:400;line-height:1.25;min-width:44px;min-height:44px;text-align:center;text-decoration:none}
+.doodle-label{display:block;position:relative;z-index:2;transform:rotate(var(--label-angle,0deg));transition:transform 180ms ease}
+.doodle-link svg{width:100%;height:auto;display:block;overflow:visible;transform:rotate(var(--angle,0deg));transform-origin:50% 90%;transition:transform 220ms cubic-bezier(.2,.8,.3,1.25)}
+.doodle-link:hover svg,.doodle-link:focus-visible svg{transform:rotate(calc(var(--angle,0deg) + var(--wiggle,9deg))) translateY(-4px) scale(1.07)}
+.doodle-link:hover .doodle-label{transform:translateY(-4px) rotate(calc(var(--label-angle,0deg) - 5deg))}
+.doodle-about{width:13%;--angle:-8deg;--label-angle:8deg;--wiggle:11deg;margin-bottom:-1.8%}
+.doodle-work{width:16%;--angle:3deg;--label-angle:-8deg;--wiggle:-9deg;margin-left:4%;margin-bottom:-.9%}
+.doodle-play{width:15%;--angle:-4deg;--label-angle:5deg;margin-bottom:-1.6%}
+.theme-control{width:9%;padding:0;border:0;background:none;color:inherit;cursor:pointer;--label-angle:-4deg;margin-bottom:-1%;display:none}
+.js .theme-control{display:grid}
+.theme-control svg{width:100%;height:auto;overflow:visible;transform:rotate(5deg);transition:transform 180ms ease}
+.theme-control:hover svg{transform:rotate(-4deg)}
+.switch-knob{transform:translateY(0);transition:transform 160ms ease}
+[data-theme="light"] .switch-knob{transform:translateY(-19px)}
+.poster-title{margin:0;position:relative;font-weight:400;line-height:1;z-index:1}
+.name-art{display:flex;width:100%;align-items:stretch;height:clamp(60px,10.7vw,144px);gap:.15%;color:var(--poster-ink)}
+.letter-art{display:block;height:100%;width:auto;overflow:visible;flex-shrink:0}
+.name-art>.letter-art{width:calc(clamp(60px,10.7vw,144px) * var(--ratio))}
+.word-space{flex:0 0 2.5%}
+.letter-front{fill:currentColor;stroke:currentColor;stroke-width:.45;stroke-linejoin:round}
+.letter-back{fill:var(--paper);stroke:currentColor;stroke-width:.85;stroke-linejoin:round}
+.stretch-h{flex:1;min-width:34px;display:flex;position:relative;margin-left:-.3%;margin-right:.3%;height:100%}
+.stretch-side{flex:0 0 auto;width:calc(clamp(60px,10.7vw,144px) * .22);height:100%;overflow:visible;position:relative;z-index:1}
+.stretch-middle{flex:1;min-width:0;position:relative;margin:0 -1px}
+.stretch-middle::before,.stretch-middle::after{content:"";position:absolute;width:calc(100% + 1px);height:16.84%;top:39.2%;box-sizing:border-box}
+.stretch-middle::before{background:var(--paper);border-top:1px solid currentColor;border-bottom:1px solid currentColor;transform:translate(3.6px,4px)}
+.stretch-middle::after{background:currentColor;border-top:1px solid currentColor;border-bottom:1px solid currentColor}
+.poster-tagline{margin:clamp(8px,1.1vw,16px) 0 0;line-height:1}
+.poster-tagline .letter-art{height:auto;width:100%}
+.outline-art .letter-back{fill:currentColor;stroke:currentColor;stroke-width:1.1}
+.outline-art .letter-front{fill:var(--paper);stroke:currentColor;stroke-width:1.1}
+.tagline-live,.name-live{font-family:var(--disp);font-weight:400;text-transform:uppercase;display:none}
+.poster-tagline.custom-copy .letter-art,.poster-title.custom-copy .name-art{display:none}
+.poster-tagline.custom-copy .tagline-live{display:block;font-size:clamp(24px,5vw,72px);line-height:1.05}
+.poster-title.custom-copy .name-live{display:block;font-size:clamp(60px,11vw,160px);line-height:1}
+.poster-contact{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-top:clamp(10px,1.3vw,20px);padding:0 1.5% 0 11%}
+.doodle-email{width:14%;min-width:62px;--angle:-4deg;--label-angle:8deg;--wiggle:-10deg;position:relative}
+.doodle-email .doodle-label{margin-top:-11%;justify-self:end}
+.powered{display:flex;align-items:center;gap:8px;margin-top:-1.5%;max-width:50%;text-align:right}
+.powered p{font-size:clamp(10px,1.05vw,14px);line-height:1.4;margin:0}
+.doodle-coffee{width:clamp(68px,10vw,130px);flex-shrink:0;--angle:7deg;--wiggle:-9deg}
+.poster-colophon{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:clamp(24px,2.6vw,38px);font-size:clamp(11px,1vw,13px);line-height:1.5;text-align:center}
+.poster-home .skip-link{background:var(--poster-ink);color:var(--paper)}
+@media(min-width:1600px){.name-art{height:144px}.name-art>.letter-art{width:calc(144px * var(--ratio))}.stretch-side{width:31.68px}}
+@media(max-width:700px){
+ .poster-frame{padding:38px clamp(16px,4vw,28px)}
+ .poster-nav{padding:0;gap:2%;margin-bottom:3px}
+ .doodle-about{width:16%;margin-left:0}
+ .doodle-work{width:20%;margin-left:0}
+ .doodle-play{width:19%}
+ .theme-control{width:12%}
+ .doodle-link,.theme-control{font-size:12px}
+ .name-art{height:clamp(44px,13.5vw,94px);gap:0}
+ .name-art>.letter-art{width:calc(clamp(44px,13.5vw,94px) * var(--ratio))}
+ .stretch-side{width:calc(clamp(44px,13.5vw,94px) * .22)}
+ .stretch-h{min-width:24px}
+ .word-space{flex-basis:2%}
+ .poster-tagline{margin-top:8px}
+ .poster-tagline .letter-back{display:none}
+ .poster-tagline .letter-front{fill:currentColor;stroke:none}
+ .poster-contact{padding:0 0 0 5%;gap:14px;margin-top:16px}
+ .powered{max-width:60%;gap:1px}
+ .powered p{font-size:10px}
+ .doodle-coffee{width:67px}
+ .poster-colophon{max-width:27ch;margin:38px auto 0;font-size:12px;gap:4px 8px}
+}
+@media(max-width:360px){
+ .poster-frame{padding-inline:13px}
+ .name-art{height:40px}.name-art>.letter-art{width:calc(40px * var(--ratio))}.stretch-side{width:8.8px}
+ .doodle-link,.theme-control{font-size:11px}
+ .powered p{font-size:9px}
+ .doodle-coffee{width:58px}
+}
+@media(prefers-reduced-motion:reduce){.poster *{transition:none!important}}
