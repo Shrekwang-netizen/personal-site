@@ -32,7 +32,7 @@
   var PAGES = [
     { href: "about.html", label: "About", key: "about" },
     { href: "onclock.html", label: "Work", key: "onclock" },
-    { href: "offclock.html", label: "Play", key: "offclock" }
+    { href: "offclock.html", label: "After Work", key: "offclock" }
   ];
 
   function buildNav() {
