@@ -173,7 +173,7 @@
       (j.note ? '<div class="modal-note">' + ph(j.note) + "</div>" : "") +
 
       '<h3 class="sec-title">Interested?</h3>' +
-      '<p>Email me to ask about the role and current availability.</p>' +
+      '<p>If this sounds like a good fit, get in touch. I\'m happy to share more about the role and confirm current openings.</p>' +
       (S.email ? '<p><a class="row-link" href="mailto:' + esc(S.email) + '?subject=' + encodeURIComponent('About the ' + j.title + ' role') + '">Email about this role &rarr;</a></p>' : "");
 
     var returnFocus = document.activeElement;
@@ -310,11 +310,11 @@
         '<div class="drink-head">' +
           '<span class="drink-idx">' + String(i + 1).padStart(2, "0") + "</span>" +
           '<h3 class="drink-title">' + esc(c.name) + "</h3>" +
-          (c.url ? '<a class="drink-link" href="' + esc(c.url) + '" target="_blank" rel="noopener" aria-label="Read notes for ' + esc(c.name) + '">Notes ↗</a>' : "") +
+          (c.url ? '<a class="drink-link" href="' + esc(c.url) + '" target="_blank" rel="noopener" aria-label="Read notes for ' + esc(c.name) + '">Read notes ↗</a>' : "") +
         "</div>" +
         (c.note ? '<p class="drink-recipe">' + esc(c.note) + '</p>' : '') +
       "</div>";
-    }).join("") : '<p class="empty-state">No matches. Try a name or ingredient.</p>';
+    }).join("") : '<p class="empty-state">No cocktails found. Try another name or ingredient.</p>';
   }
 
 
@@ -334,7 +334,7 @@
         'allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" ' +
         'allowfullscreen></iframe>' +
       '<p class="embed-fallback">' +
-        '<a href="https://open.spotify.com/album/' + esc(sp.album) + '" target="_blank" rel="noopener">Open in Spotify ↗</a>' +
+        '<a href="https://open.spotify.com/album/' + esc(sp.album) + '" target="_blank" rel="noopener">Listen on Spotify ↗</a>' +
       "</p>" +
       (sp.note ? '<p class="embed-note">' + ph(sp.note) + "</p>" : "");
   }

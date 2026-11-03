@@ -11,7 +11,7 @@ const SITE = {
   "wechat": "imtheshrekwz",
   "hero": {
     "subtitle": "Recruiter · Bartender · Ex-boxer",
-    "line2": "Recruiter at DeepSeek AI."
+    "line2": "Hi, I'm Shrek. I recruit engineers at DeepSeek AI."
   },
   "socials": [
     {
@@ -36,14 +36,14 @@ const JOBS = [
     "track": "Experienced",
     "team": "Training Data",
     "city": "Beijing",
-    "oneLiner": "Build training-data services in C++ or Go, including storage, sample serving and I/O performance.",
+    "oneLiner": "Build services in C++ or Go to store and deliver training data, with a focus on I/O performance.",
     "why": [
-      "High-throughput storage and sample delivery.",
-      "Performance profiling and data integrity."
+      "Build high-throughput storage and sample delivery services.",
+      "Profile performance and maintain data integrity."
     ],
     "looking": [
       "Strong C++ or Go skills.",
-      "Experience profiling services and debugging interactions across a system."
+      "Experience profiling services and debugging issues across systems."
     ]
   },
   {
@@ -54,19 +54,19 @@ const JOBS = [
     "city": "Beijing",
     "oneLiner": "Build and operate elastic compute clusters, with a focus on scheduling, isolation and reliability.",
     "why": [
-      "Cluster scheduling and resource isolation.",
-      "Performance, observability and reliability."
+      "Work on cluster scheduling and resource isolation.",
+      "Improve performance, observability and reliability."
     ],
     "looking": [
       "Experience operating production infrastructure.",
-      "Depth in scheduling, container isolation or observability."
+      "In-depth knowledge of scheduling, container isolation or observability."
     ]
   }
 ];
 
 const FEATURED_SITE = {
   "name": "AIFLOW",
-  "desc": "A collection of people moves and organizational changes across the AI industry.",
+  "desc": "My side project following hiring, career moves and team changes across the AI industry.",
   "url": "https://shrekwang-netizen.github.io/aiflow-site/"
 };
 
@@ -280,9 +280,9 @@ const SPOTIFY = {
 const ABOUT = {
   "headline": "About",
   "paragraphs": [
-    "I recruit engineers at DeepSeek AI and studied multilingualism at NYU.",
-    "Outside work, I tend bar and play guitar. I used to box."
+    "Hi, I'm Shrek. I recruit engineers at DeepSeek AI.",
+    "I studied multilingualism at NYU. Outside work, I tend bar and play guitar. I'm a former boxer, too."
   ],
   "contactTitle": "Say hello",
-  "contactText": "For roles or a conversation, reach me by email or WeChat."
+  "contactText": "Curious about a role at DeepSeek, or just want to say hello? I'd be happy to hear from you by email or WeChat."
 };
